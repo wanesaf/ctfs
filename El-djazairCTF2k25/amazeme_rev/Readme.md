@@ -22,9 +22,9 @@ During this CTF , I was unable to solve this challenge so I decided to try to so
    - We can see that the initial values of variables are (3,0) and the maze function returns a value !=0 only if (3,0) became (4,7).
    
    - Using LLM
-     1.  I found that the variable called DATA... is the maze :
+     1. I found that the variable called DATA... is the maze :
      
-     <img width="180" height="467" alt="kali-2025-08-31-12-52-19" src="https://github.com/user-attachments/assets/f0de8083-4c8a-4ca2-89c8-80bff57eb58d" />
+         <img width="180" height="467" alt="3" src="https://github.com/user-attachments/assets/f0de8083-4c8a-4ca2-89c8-80bff57eb58d" />
 
      2. To get the right input ( the 32-bits decimal value that represents 16 * 2bits , and each 2 bits represent a mouvement (right,up,down,left) we must write a pathfinding algorithm to go from (3,0) to (7,4).
      
@@ -32,9 +32,9 @@ During this CTF , I was unable to solve this challenge so I decided to try to so
 
 5. Running the exploit and the program :
    
-   <img width="888" height="87" alt="3" src="https://github.com/user-attachments/assets/5bba3540-f566-4308-962c-d2f745ed04f7" />
+   <img width="888" height="87" alt="4" src="https://github.com/user-attachments/assets/5bba3540-f566-4308-962c-d2f745ed04f7" />
 
-   <img width="589" height="455" alt="4" src="https://github.com/user-attachments/assets/64f8e639-56b7-4362-9e39-ac92a09dcde1" />
+   <img width="589" height="455" alt="5" src="https://github.com/user-attachments/assets/64f8e639-56b7-4362-9e39-ac92a09dcde1" />
 
 ## FLAG : El-DjazairCTF{backtracking_b_3iniya_:p}
 
