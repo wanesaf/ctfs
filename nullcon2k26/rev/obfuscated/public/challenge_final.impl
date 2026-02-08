@@ -1,0 +1,250 @@
+IMPLEMENTATION challenge_final
+
+IMPORT Stream      ONLY input output stdIn stdOut readLine writeLine
+       String      COMPLETELY
+       StringConv  ONLY !
+       Char        ONLY char
+       CharConv    ONLY asNat
+       Nat         COMPLETELY
+       NatConv     ONLY asChar `
+       Denotation  ONLY ++
+       Com         ONLY com
+       ComCompose  ONLY &
+       Void        ONLY void
+       BOOL        ONLY bool true false
+       Seq[nat]    COMPLETELY
+       SeqIndex[nat] ONLY ! upd
+
+FUN f1 : nat -> nat
+DEF f1(a) ==
+  IF a = (("97"!)) THEN (("83"!))
+  ELSE IF a = (("98"!)) THEN (("117"!))
+  ELSE IF a = (("99"!)) THEN (("67"!))
+  ELSE IF a = (("100"!)) THEN (("98"!))
+  ELSE IF a = (("101"!)) THEN (("116"!))
+  ELSE IF a = (("102"!)) THEN (("36"!))
+  ELSE IF a = (("103"!)) THEN (("96"!))
+  ELSE IF a = (("104"!)) THEN (("64"!))
+  ELSE IF a = (("105"!)) THEN (("49"!))
+  ELSE IF a = (("106"!)) THEN (("33"!))
+  ELSE IF a = (("107"!)) THEN (("72"!))
+  ELSE IF a = (("108"!)) THEN (("85"!))
+  ELSE IF a = (("109"!)) THEN (("69"!))
+  ELSE IF a = (("110"!)) THEN (("75"!))
+  ELSE IF a = (("111"!)) THEN (("119"!))
+  ELSE IF a = (("112"!)) THEN (("107"!))
+  ELSE IF a = (("113"!)) THEN (("86"!))
+  ELSE IF a = (("114"!)) THEN (("78"!))
+  ELSE IF a = (("115"!)) THEN (("48"!))
+  ELSE IF a = (("116"!)) THEN (("99"!))
+  ELSE IF a = (("117"!)) THEN (("76"!))
+  ELSE IF a = (("118"!)) THEN (("61"!))
+  ELSE IF a = (("119"!)) THEN (("100"!))
+  ELSE IF a = (("120"!)) THEN (("125"!))
+  ELSE IF a = (("121"!)) THEN (("113"!))
+  ELSE IF a = (("122"!)) THEN (("121"!))
+  ELSE IF a = (("65"!)) THEN (("106"!))
+  ELSE IF a = (("66"!)) THEN (("118"!))
+  ELSE IF a = (("67"!)) THEN (("58"!))
+  ELSE IF a = (("68"!)) THEN (("103"!))
+  ELSE IF a = (("69"!)) THEN (("65"!))
+  ELSE IF a = (("70"!)) THEN (("57"!))
+  ELSE IF a = (("71"!)) THEN (("89"!))
+  ELSE IF a = (("72"!)) THEN (("91"!))
+  ELSE IF a = (("73"!)) THEN (("44"!))
+  ELSE IF a = (("74"!)) THEN (("59"!))
+  ELSE IF a = (("75"!)) THEN (("63"!))
+  ELSE IF a = (("76"!)) THEN (("115"!))
+  ELSE IF a = (("77"!)) THEN (("50"!))
+  ELSE IF a = (("78"!)) THEN (("51"!))
+  ELSE IF a = (("79"!)) THEN (("77"!))
+  ELSE IF a = (("80"!)) THEN (("55"!))
+  ELSE IF a = (("81"!)) THEN (("101"!))
+  ELSE IF a = (("82"!)) THEN (("71"!))
+  ELSE IF a = (("83"!)) THEN (("92"!))
+  ELSE IF a = (("84"!)) THEN (("39"!))
+  ELSE IF a = (("85"!)) THEN (("46"!))
+  ELSE IF a = (("86"!)) THEN (("80"!))
+  ELSE IF a = (("87"!)) THEN (("90"!))
+  ELSE IF a = (("88"!)) THEN (("79"!))
+  ELSE IF a = (("89"!)) THEN (("41"!))
+  ELSE IF a = (("90"!)) THEN (("108"!))
+  ELSE IF a = (("33"!)) THEN (("70"!))
+  ELSE IF a = (("34"!)) THEN (("62"!))
+  ELSE IF a = (("35"!)) THEN (("87"!))
+  ELSE IF a = (("36"!)) THEN (("120"!))
+  ELSE IF a = (("37"!)) THEN (("40"!))
+  ELSE IF a = (("38"!)) THEN (("123"!))
+  ELSE IF a = (("39"!)) THEN (("34"!))
+  ELSE IF a = (("40"!)) THEN (("42"!))
+  ELSE IF a = (("41"!)) THEN (("68"!))
+  ELSE IF a = (("42"!)) THEN (("81"!))
+  ELSE IF a = (("43"!)) THEN (("109"!))
+  ELSE IF a = (("44"!)) THEN (("35"!))
+  ELSE IF a = (("45"!)) THEN (("110"!))
+  ELSE IF a = (("46"!)) THEN (("37"!))
+  ELSE IF a = (("47"!)) THEN (("54"!))
+  ELSE IF a = (("58"!)) THEN (("97"!))
+  ELSE IF a = (("59"!)) THEN (("84"!))
+  ELSE IF a = (("60"!)) THEN (("112"!))
+  ELSE IF a = (("61"!)) THEN (("66"!))
+  ELSE IF a = (("62"!)) THEN (("114"!))
+  ELSE IF a = (("63"!)) THEN (("122"!))
+  ELSE IF a = (("64"!)) THEN (("47"!))
+  ELSE IF a = (("91"!)) THEN (("53"!))
+  ELSE IF a = (("92"!)) THEN (("38"!))
+  ELSE IF a = (("93"!)) THEN (("56"!))
+  ELSE IF a = (("94"!)) THEN (("52"!))
+  ELSE IF a = (("95"!)) THEN (("74"!))
+  ELSE IF a = (("96"!)) THEN (("45"!))
+  ELSE IF a = (("123"!)) THEN (("102"!))
+  ELSE IF a = (("124"!)) THEN (("126"!))
+  ELSE IF a = (("125"!)) THEN (("104"!))
+  ELSE IF a = (("126"!)) THEN (("43"!))
+  ELSE IF a = (("48"!)) THEN (("60"!))
+  ELSE IF a = (("49"!)) THEN (("124"!))
+  ELSE IF a = (("50"!)) THEN (("94"!))
+  ELSE IF a = (("51"!)) THEN (("95"!))
+  ELSE IF a = (("52"!)) THEN (("88"!))
+  ELSE IF a = (("53"!)) THEN (("73"!))
+  ELSE IF a = (("54"!)) THEN (("105"!))
+  ELSE IF a = (("55"!)) THEN (("111"!))
+  ELSE IF a = (("56"!)) THEN (("82"!))
+  ELSE IF a = (("57"!)) THEN (("93"!))
+  ELSE a
+  FI FI FI FI FI FI FI FI FI FI
+  FI FI FI FI FI FI FI FI FI FI
+  FI FI FI FI FI FI FI FI FI FI
+  FI FI FI FI FI FI FI FI FI FI
+  FI FI FI FI FI FI FI FI FI FI
+  FI FI FI FI FI FI FI FI FI FI
+  FI FI FI FI FI FI FI FI FI FI
+  FI FI FI FI FI FI FI FI FI FI
+  FI FI FI FI FI FI FI FI FI FI
+  FI FI FI FI
+
+FUN f2 : char -> char
+DEF f2(b) == asChar(f1(asNat(b)))
+
+FUN f3 : string -> string
+DEF f3(c) ==
+  IF empty?(c) THEN <>
+  ELSE f2(ft(c)) :: f3(rt(c))
+  FI
+
+FUN f4 : string -> seq[nat]
+DEF f4(c) ==
+  IF empty?(c) THEN <>
+  ELSE asNat(ft(c)) :: f4(rt(c))
+  FI
+
+FUN f5 : nat ** nat -> nat
+DEF f5(d, e) ==
+  IF e = 0 THEN 1
+  ELSE d * f5(d, pred(e))
+  FI
+
+FUN f6 : nat -> nat
+DEF f6(a) ==
+  IF (a % 2) = 0 THEN 1
+  ELSE (("256"!) - 1)
+  FI
+
+FUN f7 : seq[nat] ** nat -> seq[nat]
+DEF f7(f, g) ==
+  f7h(f, g % ("256"!), 0)
+
+FUN f7h : seq[nat] ** nat ** nat -> seq[nat]
+DEF f7h(f, g, h) ==
+  IF h >= #(f) THEN f
+  ELSE
+    LET i == f ! h
+        j == (i + g) % ("256"!)
+        k == upd(h, j, f)
+    IN
+      f7h(k, g, succ(h))
+  FI
+
+FUN f8 : seq[nat] ** nat -> seq[nat]
+DEF f8(f, l) == f8h(f, f, l)
+
+FUN f8h : seq[nat] ** seq[nat] ** nat -> seq[nat]
+DEF f8h(m, n, l) ==
+  IF l >= #(m) THEN n
+  ELSE
+    LET b == m ! l
+        o == b % 2
+        p == f6(o)
+        q == (l * p) % ("256"!)
+        r == f7(n, q)
+    IN
+      f8h(m, r, succ(l))
+  FI
+
+FUN f9 : nat -> char
+DEF f9(a) ==
+  IF a < (("26"!)) THEN asChar((("65"!) + a))
+  ELSE IF a < (("52"!)) THEN asChar((("97"!) + (a - (("26"!)))))
+  ELSE IF a < (("62"!)) THEN asChar((("48"!) + (a - (("52"!)))))
+  ELSE IF a = (("62"!)) THEN asChar(("43"!))
+  ELSE IF a = (("63"!)) THEN asChar(("47"!))
+  ELSE asChar(("61"!))
+  FI FI FI FI FI
+
+FUN f10 : nat ** nat ** nat -> string
+DEF f10(s, t, u) ==
+  LET v == s / (("4"!))
+      w == ((s % (("4"!))) * (("16"!))) + (t / (("16"!)))
+      x == ((t % (("16"!))) * (("4"!))) + (u / (("64"!)))
+      y == u % (("64"!))
+  IN
+    f9(v) :: f9(w) :: f9(x) :: f9(y) :: <>
+
+FUN f11 : nat ** nat -> string
+DEF f11(s, t) ==
+  LET v == s / (("4"!))
+      w == ((s % (("4"!))) * (("16"!))) + (t / (("16"!)))
+      x == (t % (("16"!))) * (("4"!))
+  IN
+    f9(v) :: f9(w) :: f9(x) :: asChar(("61"!)) :: <>
+
+FUN f12 : nat -> string
+DEF f12(s) ==
+  LET v == s / (("4"!))
+      w == (s % (("4"!))) * (("16"!))
+  IN
+    f9(v) :: f9(w) :: asChar(("61"!)) :: asChar(("61"!)) :: <>
+
+FUN f13 : seq[nat] -> string
+DEF f13(f) ==
+  f13h(f, 0)
+
+FUN f13h : seq[nat] ** nat -> string
+DEF f13h(f, h) ==
+  LET z == #(f) - h
+  IN
+    IF z >= (("3"!)) THEN
+      f10(f ! h, f ! succ(h), f ! succ(succ(h))) ++
+      f13h(f, h + (("3"!)))
+    ELSE IF z = (("2"!)) THEN
+      f11(f ! h, f ! succ(h))
+    ELSE IF z = (("1"!)) THEN
+      f12(f ! h)
+    ELSE <>
+    FI FI FI
+
+FUN f14 : string -> string
+DEF f14(bb) ==
+  LET aa == f3(bb)
+      f == f4(aa)
+      r == f8(f, 0)
+      dd == f13(r)
+  IN
+    dd
+
+DEF challenge_final ==
+  readLine(stdIn) & (\\bb.
+    LET cc == f14(bb)
+    IN
+      writeLine(stdOut, cc)
+  )
