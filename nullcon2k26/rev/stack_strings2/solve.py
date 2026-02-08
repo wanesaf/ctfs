@@ -5,7 +5,7 @@ p = angr.Project('../stackstrings_hard', auto_load_libs=False)
 
 BASE_ADDR = p.loader.main_object.mapped_base
 
-FLAG_LEN = 41
+FLAG_LEN = 41 # using decompiler check the condition ov i != length (0x29)
 
 flag_chars = [claripy.BVS(f'char_{i}', 8) for i in range(FLAG_LEN)]
 flag_combined = claripy.Concat(*flag_chars)
@@ -13,9 +13,8 @@ flag_combined = claripy.Concat(*flag_chars)
 state = p.factory.entry_state(stdin=flag_combined)
 
 
-find_offset = 0x1593  # Offset where the "Success" write loop starts
-avoid_offset = 0x14d0 # Offset where the "Failure" write (LABEL_15) starts
-
+find_offset = 0x1593  # the write of success 
+avoid_offset = 0x14d0 # the write of failure msg 
 target_addr = BASE_ADDR + find_offset
 avoid_addr = BASE_ADDR + avoid_offset
 
